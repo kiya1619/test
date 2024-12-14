@@ -1,0 +1,91 @@
+<style>
+   
+    
+    table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+caption {
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+}
+</style>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in data_list %}
+this is ew
+        <tr>
+            <td>{{ data.firstname }}</td>
+            <td>{{ data.Lastname }}</td>
+            <td>{{ ddata.id }}</td>
+        </tr>
+        {%  endfor %}
+   total values are = {{ counts }}    
+        <!-- Add more rows as needed -->
+    </tbody>
+</table>
+</body>
